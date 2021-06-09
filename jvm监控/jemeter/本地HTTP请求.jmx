@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.1" jmeter="3.1 r1770033">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="测试计划" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="用户定义的变量" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="线程组" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="循环控制器" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">50</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <longProp name="ThreadGroup.start_time">1622224711000</longProp>
+        <longProp name="ThreadGroup.end_time">1622224711000</longProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP请求" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;index&quot;: &quot;yanxue_log_read&quot;,&#xd;
+    &quot;jsonString&quot;: &quot;eyIkc2NyZWVuX2hlaWdodCI6MTA4MCwiJHNjcmVlbl93aWR0aCI6MTkyMCwid2ViX2Jyb3dzZXJfaHJlZiI6Imh0dHBzOi8veHRlc3QuY25raS5uZXQveG1sZWRpdG9yL3BlcnNvbmFsYm9vay9pbmRleC9kN2JkOTU1Ny0wYWMxLTQxNDMtOGMxOS01NDM2ZmIyMDFmOTkiLCJ3ZWJfYnJvd3Nlcl9yZWZlcnJlciI6Imh0dHBzOi8veHRlc3QuY25raS5uZXQvcHNtYyIsIndlYl9icm93c2VyX3VzZXJfYWdlbnQiOiJtb3ppbGxhLzUuMCAod2luZG93cyBudCAxMC4wOyB3b3c2NCkgYXBwbGV3ZWJraXQvNTM3LjM2IChraHRtbCwgbGlrZSBnZWNrbykgY2hyb21lLzc4LjAuMzkwNC4xMDggc2FmYXJpLzUzNy4zNiIsImVjcF91c2VyX2lkIjoiIiwiZWNwX2NsaWVudF9pZCI6IjMyMTA1MzExNDMxMDI2MzY3NzMiLCJzZXNzaW9uX2lkIjoiIiwidXNlcl9jbGllbnRfaXAiOiIiLCJzZXJ2ZXJfaXAiOiJ4dGVzdDEyMjE0MSIsIm9yZ19uYW1lIjoiIiwidXNlcl9uYW1lIjoiMTgzMTEwNDc4MjEiLCJmaWxlX25hbWUiOiIiLCJmaWxlX2RiX2NvZGUiOiIiLCJ1c2VyX2NsaWVudF90eXBlIjoid2ViIiwidXNlcl9jbGllbnRfb3MiOiJXaW5kb3dzIiwidXNlcl9jbGllbnRfb3NfdmVyc2lvbiI6IldpbmRvd3MgMTAiLCJhcHBfaWQiOiJDUlNQX0JBU0lDX1hNTEVESVRPUiIsImRpc3RpbmN0X2lkIjoiMTc5YzE3ZDFiZTg2YjEtMDA2YjhiNDUzMmM3M2YtMzc2YjQ1MDItMjA3MzYwMC0xNzljMTdkMWJlOThjZSIsImV2ZW50X3RpbWUiOiIyMDIxLTA1LTMxIDE2OjE2OjUyLjc3OSIsImV2ZW50X3RpbWVzdGFtcCI6MTYyMjQ0OTAxMjc3OSwidHlwZSI6InRyYWNrIiwiZXZlbnQiOiJ5YW54dWVfbG9nX3JlYWQiLCJldmVudF9pZCI6IkJPT0tfY2hlY2siLCIkbGF0ZXN0X3JlZmVycmVyIjoi5Y%2BW5YC85byC5bi4IiwiJGxhdGVzdF9zZWFyY2hfa2V5d29yZCI6IuWPluWAvOW8guW4uCIsIiRsYXRlc3RfdHJhZmZpY19zb3VyY2VfdHlwZSI6IuWPluWAvOW8guW4uCJ9&quot;,&#xd;
+    &quot;type&quot;: &quot;1&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">localhost</stringProp>
+          <stringProp name="HTTPSampler.port">8089</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/elasticsearch/saveToken</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">accesstoken</stringProp>
+                <stringProp name="Header.value">WEEvREdCZHpVUUwwUHJpblVNWGJHdGp0amhwQzR0enMzUllpV0pqY0tZZlduVk1j$AiWoHpiIFekDNOPcgc2OGo3vKIcpcMmDwlXisKWvbvx7tmezVSp0eA!!</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="察看结果树" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
