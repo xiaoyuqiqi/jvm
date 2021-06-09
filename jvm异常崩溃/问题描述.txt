@@ -1,0 +1,8 @@
+线上服务异常崩溃，通过日志文件分析 C  [jna8236966778357438565.tmp+0x4bb26]  CFileUser::rawExecute(int, int, int, char*, int*, char const*, int, char const*, int, char const*, int)+0x166，
+初步判断是调用底层jna报错，经排查是hfs下载用到公司其他服务的jar调用底层出错，
+
+最终解决办法
+找到相关负责人，确认问题，升级jar包 问题解决
+
+
+刚开始，初步认为是jvm没有调优  但是没有OOM  jvm是异常崩溃生成的hs_err_pid文件, JVM调优之后还是出现问题 (增大了tomcat 连接数server.tomcat.max-connections=10000 线程数server.tomcat.max-threads=800 响应时间 )，
